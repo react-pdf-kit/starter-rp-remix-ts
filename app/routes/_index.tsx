@@ -1,12 +1,12 @@
-import { RPConfig } from "@pdf-viewer/react";
 import { ClientOnly } from "remix-utils/client-only";
-import { AppPdfViewer } from "~/components/AppPDFViewer";
+import { AppPdfViewer } from "~/components/AppPDFViewer.client";
+import { AppPdfConfig } from "~/components/AppPdfConfig.client";
 
 export default function Index() {
   return (
     <ClientOnly>
       {() => (
-        <RPConfig licenseKey="">
+        <AppPdfConfig>
           <div className="container">
             <h1>RP Starter Toolkit: Remix + TypeScript</h1>
             <br />
@@ -26,7 +26,7 @@ export default function Index() {
               }}
             />
           </div>
-        </RPConfig>
+        </AppPdfConfig>
       )}
     </ClientOnly>
   );

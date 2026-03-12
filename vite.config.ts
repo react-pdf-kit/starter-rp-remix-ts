@@ -21,7 +21,4 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-  ssr: {
-    noExternal: ["@pdf-viewer/react"],
-  },
 });
